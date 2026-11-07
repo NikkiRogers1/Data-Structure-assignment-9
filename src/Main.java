@@ -3,14 +3,14 @@ import java.util.PriorityQueue;
 public class Main {
     public static void main(String[] args) {
         PriorityQueue<Company> companyQueue = new PriorityQueue<>();
-        companyQueue.add(new Company("Arasaka", 465000));
-        companyQueue.add(new Company("Militech", 2200));
-        companyQueue.add(new Company("NetWatch", 1500));
-        companyQueue.add(new Company("InnovateX", 2000));
-        companyQueue.add(new Company("Trauma Team International", 1800));
-        companyQueue.add(new Company("Night Corp", 450000));
-        companyQueue.add(new Company("Zetatech", 1200));
-        companyQueue.add(new Company("Kang tao", 4000));
+        companyQueue.add(new Company("Arasaka", 460));
+        companyQueue.add(new Company("Militech", 220));
+        companyQueue.add(new Company("NetWatch", 150));
+        companyQueue.add(new Company("InnovateX", 200));
+        companyQueue.add(new Company("Trauma Team International", 100));
+        companyQueue.add(new Company("Night Corp", 450));
+        companyQueue.add(new Company("Zetatech", 120));
+        companyQueue.add(new Company("Kang tao", 40));
 
         Company smallest = companyQueue.poll();
         System.out.println("Smallest company: " + smallest);
