@@ -17,7 +17,31 @@ public class Main {
         companyQueue.add(smallest);
         System.out.println("Queue size: " + companyQueue.size());
 
+       
+        while(companyQueue.size() >= 2) { 
 
 
+        //Removing the 2 smallest companies
+        Company firstSmallest = companyQueue.poll();
+        Company secondSmallest = companyQueue.poll();
+    
+        int sizeA = firstSmallest.getSize();
+        int sizeB = secondSmallest.getSize();
+
+        int totalSize = sizeA + sizeB;
+
+        int newSize = (int) (totalSize * 1.1);
+
+        String newName = firstSmallest.getName() + "-" + secondSmallest.getName();
+
+        Company mergedCompany = new Company(newName, newSize);
+        companyQueue.add(mergedCompany);
+
+        System.out.println("MERGER: " + firstSmallest.getName() + " and " + secondSmallest.getName() + " have merged into " + mergedCompany.getName()  + " with size " + mergedCompany.getSize() + "!");
+        
+
+        }
+
+    
     }
 }
