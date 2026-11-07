@@ -9,3 +9,8 @@ Phase 2-
 ## Phase 2
 
 The priority queue is more efficient for this process than an ArrayList because of what happens each time through my loop. At the end of every pass, one new merged company goes back in. With an ArrayList, I would have to stop and re-sort the whole list every time before I could pick the two smallest companies. With the priority queue, I don't have to stop and sort, because it only has to figure out where that one new company belongs. Adding one item to a priority queue takes O(log n) time, and sorting a whole list takes O(n log n) time. Re-sorting the whole list is more work, so it would take longer. The more companies there are, the bigger that difference gets.
+
+Phase 3- 
+## Phase 3
+
+If I forgot to check the queue size before calling poll() twice, my code could try to take a company out of an empty queue. With one company left, the first poll takes it out and the queue is empty. The second poll returns null because there is nothing to take. Then calling getSize() on it makes the program crash. This relates to underflow, which is trying to remove something from a data structure that is already empty. If I forgot the size check, I wouldn't know the queue was empty, so my code would try to remove from it anyway.
